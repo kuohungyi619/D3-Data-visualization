@@ -1,0 +1,18 @@
+// When enter() is combined with the data() method, it looks at the selected elements from the
+// page and compares them to the number of data items in the set.
+
+// For example
+// Here is an example that selects a ul element and creates a new list item based
+// on the number of entries in the array.
+
+<body>
+  <ul></ul>
+  <script>
+    const dataset = ["a", "b", "c"];
+    d3.select("ul").selectAll("li")
+      .data(dataset)
+      .enter()
+      .append("li")
+      .text("New item");
+  </script>
+</body>
